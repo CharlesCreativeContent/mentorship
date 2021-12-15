@@ -1,7 +1,7 @@
 // Custom JavaScript Document
 $(document).ready(function() {
     "use strict";
-	
+
 		// header transitions
 		function headerSticky(){
 			var windowPos=$(window).scrollTop();
@@ -21,25 +21,25 @@ $(document).ready(function() {
         	offset:	190,
             target:	'.dtr-scrollspy'
         });
-		
-		// nav scroll	
+
+		// nav scroll
 		var myoffset = $('#dtr-header-global').height();
-		$('.navbar a[href^="#"]').click(function(){  
-			event.preventDefault();  
+		$('.navbar a[href^="#"]').click(function(){
+			event.preventDefault();
 			$('html, body').animate({
 				scrollTop: $($(this).attr('href')).offset().top - myoffset
 			}, "slow","easeInSine");
 		});
-		
+
 		// custom scroll link
 		var customoffset = $('#dtr-header-global').height();
-		$('.dtr-scroll-link').click(function(event){  
-			event.preventDefault();    
+		$('.dtr-scroll-link').click(function(event){
+			event.preventDefault();
 			$('html, body').animate({
 				scrollTop: $($(this).attr('href')).offset().top - customoffset
 			}, "slow","easeInSine");
 		});
-	
+
  		// sticky tabs
 		if ($(".dtr-sticky-tabs-wrapper").length > 0) {
 			var tabs_container = $(".dtr-sticky-tabs-wrapper");
@@ -57,15 +57,15 @@ $(document).ready(function() {
 			});
 		}
 
-		// sticky tabs scroll 
+		// sticky tabs scroll
 		var taboffset = $('#dtr-header-global').height();
-		$('.dtr-sticky-tabs li a').click(function(event){  
-			event.preventDefault();    
+		$('.dtr-sticky-tabs li a').click(function(event){
+			event.preventDefault();
 			$('html, body').animate({
 				scrollTop: $($(this).attr('href')).offset().top - taboffset - 100
 			}, "slow","easeInSine");
 		});
-		
+
 		// sectionAnchor
 		function sectionAnchor() {
 		var navoffset = $('#dtr-header-global').height();
@@ -105,16 +105,16 @@ $(document).ready(function() {
 				},
 			}
 		});
-		
+
 		// blog
 		var swiper = new Swiper('.swiper-container.dtr-blog-carousel', {
 			slidesPerView: 1,
 			spaceBetween: 0,
 			loop: true,
-			/* autoplay: {
+      autoplay: {
 				delay: 4000,
-				disableOnInteraction: false,
-			},*/
+				disableOnInteraction: true,
+			},
 			navigation: {
 				nextEl: '.swiper-button-next.dtr-swiper-next',
 				prevEl: '.swiper-button-prev.dtr-swiper-prev',
@@ -130,7 +130,7 @@ $(document).ready(function() {
 				},
 			}
 		});
-		
+
 		// bootstrap nav dropdown hover
 		$(function(){
 			$('.nav-item.dropdown').hover(function() {
@@ -140,10 +140,10 @@ $(document).ready(function() {
 				$('.dropdown-menu, .dropdown').removeClass('show');
 			});
 		});
-		
+
 		// video popup
-		$('.dtr-video-popup').venobox(); 
-		
+		$('.dtr-video-popup').venobox();
+
 		// Custom Selects
 		$(".dtr-select").select2({
     		minimumResultsForSearch: -1,
@@ -162,8 +162,8 @@ $(document).ready(function() {
 			});
 		});
 		//To clear message field on page refresh (you may clear other fields too, just give the 'id to input field' in html and mention it here, as below)
-		$('#contactform #message').val('');	
-		
+		$('#contactform #message').val('');
+
 		// dropdown close on click
 		$('.navbar-nav>li>a, .dropdown-item').on('click', function(){
     		$('.navbar-collapse').collapse('hide');
