@@ -6,14 +6,20 @@
 <meta name="format-detection" content="telephone=no">
 <title>Bootcamp to Faang - Tech Mentorship</title>
 <meta name="author" content="Shawn Charles">
-<meta name="description" content="Landing Page">
+<meta name="description" content="Mentorship Landing Page">
 <meta name="keywords" content="mentorship, resume, interview, portfolio, projects, bootcamp, faang, tech">
 
 <!-- FAVICON FILES -->
-<link href="assets/images/icons/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
-<link href="assets/images/icons/apple-touch-icon-120-precomposed.png" rel="apple-touch-icon" sizes="120x120">
-<link href="assets/images/icons/apple-touch-icon-76-precomposed.png" rel="apple-touch-icon" sizes="76x76">
-<link href="assets/images/icons/favicon.png" rel="shortcut icon">
+<link href="assets/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="assets/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="assets/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="assets/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="assets/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="assets/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="assets/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="assets/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="assets/images/icons/apple-touch-icon.png" rel="apple-touch-icon">
+<link href="assets/images/icons/favicon.ico" rel="shortcut icon">
 
 <!-- GOOGLE WEB FONT -->
 <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap" rel="stylesheet">
@@ -48,7 +54,7 @@
 
 
                 <!-- button here -->
-                <div class="dtr-btn ml-4 d-none d-lg-block"> <a href="#">Schedule A Meeting <span><i class="icon-phone-call" aria-hidden="true"></i></span> </a> </div>
+                <div class="dtr-btn ml-4 d-none d-lg-block" data-toggle="modal" data-target="#exampleModal" id="calendlySignup" onclick="makeSignup" > <a href="#">Schedule A Meeting <span><i class="icon-phone-call" aria-hidden="true"></i></span> </a> </div>
                 <!-- button ends -->
             </div>
         </nav>
@@ -66,8 +72,8 @@
                 <div class="col-12 col-md-6 dtr-sm-mb-30px">
 
                     <!-- Heading -->
-                    <h1 class="dtr-mb-4 wow fadeInUp" data-wow-delay="0.4s">Need Tech Job?<br>
-                        Get Tech Mentor!</h1>
+                    <h1 class="dtr-mb-4 wow fadeInUp" data-wow-delay="0.4s">Need a Tech Job?<br>
+                        Get a Tech Mentor!</h1>
 
                     <!-- Text -->
                     <p class="dtr-mb-5 color-white-muted wow fadeInUp w-75" data-wow-delay="0.6s">
@@ -75,7 +81,7 @@
 			    tailored to help each individual thrive in the tech industry.</p>
 
                     <!-- button -->
-                    <div class="dtr-btn wow fadeInUp" data-wow-delay="0.8s"> <a href="#">Sign-up<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
+                    <div class="dtr-btn wow fadeInUp" data-wow-delay="0.8s" data-toggle="modal" data-target="#exampleModal" id="calendlySignup" onclick="makeSignup" > <a href="#">Sign-up<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
                 </div>
                 <!-- column 1 ends -->
 
@@ -195,7 +201,7 @@
                                 <p class="dtr-mb-5"> Step by step career guides to help you on your personal tech journey </p>
 
                                 <!-- button here -->
-                                <div class="dtr-btn"> <a href="#">Sign-up<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
+                                <div class="dtr-btn" data-toggle="modal" data-target="#exampleModal" id="calendlySignup" onclick="makeSignup" > <a href="#">Sign-up<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
                             </div>
                             <!-- column 2 ends -->
 
@@ -224,7 +230,7 @@
                                 <p class="dtr-mb-5"> Make a Stellar Portfolio & Resume to get the hiring process off the ground</p>
 
                                 <!-- button here -->
-                                <div class="dtr-btn"> <a href="#">Sign-up<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
+                                <div class="dtr-btn" data-toggle="modal" data-target="#exampleModal" id="calendlySignup" onclick="makeSignup" > <a href="#">Sign-up<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
                             </div>
                             <!-- column 1 ends -->
 
@@ -261,7 +267,11 @@
                                 <p class="dtr-mb-5"> Get a Higher Salary and Confidence in your next tech interview  </p>
 
                                 <!-- button here -->
-                                <div class="dtr-btn"> <a href="#">Sign-up<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
+                                <div class="dtr-btn" data-toggle="modal" data-target="#exampleModal" id="calendlySignup" onclick="makeSignup" >
+                                   <a href="#">
+Sign-up<span><i class="icon-arrow-right" aria-hidden="true"></i></span>
+</a>
+</div>
                             </div>
                             <!-- column 2 ends -->
 
@@ -560,8 +570,32 @@
 
 </div>
 <!-- #dtr-wrapper ends -->
+
+<!-- Calendly inline widget begin -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="calendly-inline-widget" style="min-width:320px;height:580px;" data-auto-load="false">
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+      <script>
+      Calendly.initInlineWidget({
+      url: 'https://calendly.com/bootcamptofaang/signup'
+      });
+      </script>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Calendly inline widget end -->
+
 <!-- JS FILES -->
 <script src="https://kit.fontawesome.com/170c91c28b.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
 <script src="assets/js/jquery.min.js" type="text/javascript" ></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="assets/js/jquery.easing.js" type="text/javascript"></script>

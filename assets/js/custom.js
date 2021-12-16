@@ -170,3 +170,13 @@ $(document).ready(function() {
 		});
 
 }); // document ready
+
+let makeSignup = function(){
+    Calendly.initInlineWidget({
+url: 'https://calendly.com/bootcamptofaang/signup'
+});
+}
+
+let toggleSignup = ()=>{
+  $('#exampleModal').modal('toggle')
+}
