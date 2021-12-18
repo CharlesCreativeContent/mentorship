@@ -62,6 +62,6 @@ div[data-mobile-signup="false"] {
 
 @media (max-width: 392px) {
 div[data-mobile-signup="true"] {
-  margin-left: 0 !important;
+  display: none !important;
 }
 }
