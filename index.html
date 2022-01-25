@@ -641,17 +641,5 @@ Join<span><i class="icon-arrow-right" aria-hidden="true"></i></span>
 let now = new Date().getYear()+1900
   document.getElementById("copyright").innerHTML = now
 </script>
-<!-- Script to update meet links -->
-<script>
-	let url = "https://meet.google.com/ixm-gxsb-nry"
-	let links = document.querySelectorAll(".meets")
-	links.forEach(link=>{
-	link.href = url
-	})
-	let day = Date.now().getDay()
-	let hour = Date.now().getHour()
-	let minute = Date.now().getMinute()
-	console.log(day,hour,minute)
-</script>
 </body>
 </html>
