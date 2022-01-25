@@ -180,3 +180,9 @@ url: 'https://calendly.com/bootcamptofaang/signup'
 let toggleSignup = ()=>{
   $('#exampleModal').modal('toggle')
 }
+
+let url = "https://meet.google.com/ixm-gxsb-nry"
+document.querySelectorAll(".meets").forEach(link=>{
+	link.href = url
+	}) 
+console.log("DONE")
