@@ -180,9 +180,11 @@ url: 'https://calendly.com/bootcamptofaang/signup'
 let toggleSignup = ()=>{
   $('#exampleModal').modal('toggle')
 }
-
-let url = "https://meet.google.com/ixm-gxsb-nry"
+// Function to change signup links
+(function setMeetUpLinks(url){
 document.querySelectorAll(".meets").forEach(link=>{
 	link.href = url
-	}) 
+	}
+					    //Update Meetup Link below
+}("https://meet.google.com/ixm-gxsb-nry")
 console.log("DONE")
