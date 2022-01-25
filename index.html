@@ -52,10 +52,10 @@
 
 
                 <!-- button here -->
-                <div class="dtr-btn d-lg-block" data-mobile-signup="false" data-toggle="modal" data-target="#exampleModal" id="calendlySignup" onclick="makeSignup" > <a href="#">Schedule A Meeting <span><i class="icon-phone-call" aria-hidden="true"></i></span> </a> </div>
+                <div class="dtr-btn d-lg-block" data-mobile-signup="false"> <a href="#" class="meets" >Join Meeting <span><i class="icon-phone-call" aria-hidden="true"></i></span> </a> </div>
                 <!-- button ends -->
                 <!-- button here -->
-                <div class="dtr-btn d-lg-block" data-mobile-signup="true" data-toggle="modal" data-target="#exampleModal" id="calendlySignup" onclick="makeSignup" > <a href="#">Sign-Up <span><i class="icon-phone-call" aria-hidden="true"></i></span> </a> </div>
+                <div class="dtr-btn d-lg-block" data-mobile-signup="true"> <a href="#"  class="meets" >Join <span><i class="icon-phone-call" aria-hidden="true"></i></span> </a> </div>
                 <!-- button ends -->
 
             </div>
@@ -82,7 +82,7 @@
                       FREE Mentorship Community customized and tailored to help each individual thrive in the tech industry! Resume & Portfolio workshops, Interview Prep, Career Building, Networking Events and more.</p>
 
                     <!-- button -->
-                    <div class="dtr-btn wow fadeInUp" data-wow-delay="0.8s" data-toggle="modal" data-target="#exampleModal" id="calendlySignup" onclick="makeSignup" > <a href="#">Sign-up<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
+                    <div class="dtr-btn wow fadeInUp" data-wow-delay="0.8s"> <a href="#">Join<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
                 </div>
                 <!-- column 1 ends -->
 
@@ -202,7 +202,7 @@
                                 <p class="dtr-mb-5"> Step by step career guides to help you on your personal tech journey </p>
 
                                 <!-- button here -->
-                                <div class="dtr-btn" data-toggle="modal" data-target="#exampleModal" id="calendlySignup" onclick="makeSignup" > <a href="#">Sign-up<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
+                                <div class="dtr-btn"> <a href="#"  class="meets">Join<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
                             </div>
                             <!-- column 2 ends -->
 
@@ -231,7 +231,7 @@
                                 <p class="dtr-mb-5"> Make a Stellar Portfolio & Resume to get the hiring process off the ground</p>
 
                                 <!-- button here -->
-                                <div class="dtr-btn" data-toggle="modal" data-target="#exampleModal" id="calendlySignup" onclick="makeSignup" > <a href="#">Sign-up<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
+                                <div class="dtr-btn" > <a href="#"  class="meets">Join<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
                             </div>
                             <!-- column 1 ends -->
 
@@ -268,9 +268,9 @@
                                 <p class="dtr-mb-5"> Get a Higher Salary and Confidence in your next tech interview  </p>
 
                                 <!-- button here -->
-                                <div class="dtr-btn" data-toggle="modal" data-target="#exampleModal" id="calendlySignup" onclick="makeSignup" >
-                                   <a href="#">
-Sign-up<span><i class="icon-arrow-right" aria-hidden="true"></i></span>
+                                <div class="dtr-btn">
+                                   <a href="#"  class="meets" >
+Join<span><i class="icon-arrow-right" aria-hidden="true"></i></span>
 </a>
 </div>
                             </div>
@@ -605,12 +605,8 @@ Sign-up<span><i class="icon-arrow-right" aria-hidden="true"></i></span>
     <div class="modal-content">
 
       <div class="calendly-inline-widget" style="min-width:320px;height:580px;" data-auto-load="false">
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-      <script>
-      Calendly.initInlineWidget({
-      url: 'https://calendly.com/bootcamptofaang/signup'
-      });
-      </script>
+	      <p>Meetings Every Monday and Wednesday @ 6:30-7:30</p>
+      
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -644,6 +640,18 @@ Sign-up<span><i class="icon-arrow-right" aria-hidden="true"></i></span>
 <script>
 let now = new Date().getYear()+1900
   document.getElementById("copyright").innerHTML = now
+</script>
+<!-- Script to update meet links -->
+<script>
+	let url = "https://meet.google.com/ixm-gxsb-nry"
+	let links = document.querySelectorAll(".meets")
+	links.forEach(link=>{
+	link.href = url
+	})
+	let day = Date.now().getDay()
+	let hour = Date.now().getMinute()
+	let minute = Date.now().getMinute()
+	console.log(day,hour,minute)
 </script>
 </body>
 </html>
