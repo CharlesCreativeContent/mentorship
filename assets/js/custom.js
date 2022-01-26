@@ -184,7 +184,7 @@ let toggleSignup = ()=>{
 (function setMeetUpLinks(url){
 document.querySelectorAll(".meets").forEach(link=>{
 	link.href = url
-	}
+	})
 					    //Update Meetup Link below
-}("https://meet.google.com/ixm-gxsb-nry")
+})("https://meet.google.com/ixm-gxsb-nry")
 console.log("DONE")
