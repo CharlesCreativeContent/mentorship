@@ -181,10 +181,11 @@ let toggleSignup = ()=>{
   $('#exampleModal').modal('toggle')
 }
 // Function to change signup links
-(function setMeetUpLinks(url){
+function setMeetUpLinks(url){
 document.querySelectorAll(".meets").forEach(link=>{
 	link.href = url
 	})
-					    //Update Meetup Link below
-})("https://meet.google.com/ixm-gxsb-nry")
+}
+//Update Meetup Link below
+setMeetUpLinks("https://meet.google.com/ixm-gxsb-nry")
 console.log("DONE")
