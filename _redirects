@@ -9,6 +9,7 @@
 /math https://u1lib.org/book/4985595/cc406a
 /gmeet https://meet.google.com/landing?authuser=1
 /setmeet https://meet.google.com/landing?authuser=1
+/blog/* https://bootcamp2faang.herokuapp.com/:splat
 /blogger https://bootcamp2faang.blogspot.com/
 /medium https://medium.com/@Bootcamp2FAANG
 /hashnode https://bootcamp2faang.hashnode.dev/
